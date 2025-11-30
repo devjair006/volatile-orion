@@ -295,6 +295,47 @@ body {
     color: var(--accent-color);
 }
 
+/* Info Section */
+.info-section {
+    background-color: #f9fdf9;
+    /* Very light green background */
+}
+
+.info-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.info-text {
+    flex: 1;
+}
+
+.info-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+.info-image {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.info-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: var(--transition);
+}
+
+.info-image:hover img {
+    transform: scale(1.02);
+}
+
 /* Product Cards */
 .product-grid {
     display: grid;
@@ -541,12 +582,13 @@ body {
         right: -100%;
         width: 100%;
         height: calc(100vh - 70px);
-        background-color: var(--secondary-color);
+        background-color:rgb(85, 135, 90) ;
         /* Changed from white to secondary color */
         flex-direction: column;
         align-items: center;
         justify-content: center;
         transition: var(--transition);
+        font-size: 4rem;
     }
 
     .nav-links.active {
@@ -577,6 +619,21 @@ body {
     .hero-image {
         width: 100%;
         margin-bottom: 1rem;
+    }
+
+    .info-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .info-text {
+        order: 1;
+        /* Text first on mobile? Or image? Let's keep text first usually */
+    }
+
+    .info-image {
+        width: 100%;
+        order: 2;
     }
 
     .modal-body {
