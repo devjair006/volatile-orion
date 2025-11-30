@@ -285,6 +285,7 @@ body {
 
 /* Sections */
 .section {
+    background-color: beige;
     padding: 5rem 0;
 }
 
@@ -299,6 +300,10 @@ body {
 .info-section {
     background-color: #f9fdf9;
     /* Very light green background */
+    position: relative;
+    /* For absolute positioning of shapes */
+    overflow: hidden;
+    /* Contain shapes */
 }
 
 .info-container {
@@ -306,6 +311,9 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 4rem;
+    position: relative;
+    /* Ensure content is above shapes */
+    z-index: 1;
 }
 
 .info-text {
@@ -336,6 +344,17 @@ body {
     transform: scale(1.02);
 }
 
+/* Product Section specific */
+.products {
+    position: relative;
+    overflow: hidden;
+}
+
+.products .container {
+    position: relative;
+    z-index: 1;
+}
+
 /* Product Cards */
 .product-grid {
     display: grid;
@@ -361,7 +380,7 @@ body {
 
 .card-image {
     width: 100%;
-    
+
     overflow: hidden;
 }
 
@@ -377,16 +396,20 @@ body {
 }
 
 .card-content {
-    padding: 2rem;
+
+    padding: 4rem;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 40%;
 }
 
 .card-content h3 {
-    font-size: 1.5rem;
+    text-align: center;
+    font-size: 3rem;
     margin-bottom: 0.5rem;
+    margin-left: 1rem;
     color: var(--accent-color);
 }
 
@@ -623,14 +646,14 @@ body {
 
 /* Footer */
 .footer {
-    background-color: var(--secondary-color);
+    background-color: rgb(85, 135, 90);
     padding: 2rem 0;
     text-align: center;
     margin-top: 3rem;
 }
 
 .footer p {
-    color: var(--accent-color);
+    color: black;
 }
 
 /* Animations */
