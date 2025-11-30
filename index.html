@@ -15,7 +15,7 @@
 
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">VASORAGEN™: el futuro de la salud vascular</a>
+            <a href="#" class="logo">VASORAGEN™: El futuro de la salud vascular</a>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#catalogo">Catálogo</a></li>
@@ -53,21 +53,27 @@
     <section id="info-enfermedad" class="section info-section">
         <div class="container info-container">
             <div class="info-text fade-in">
-                <h2 class="section-title" style="text-align: left; margin-bottom: 1.5rem;">LA HTA ES MAS QUE SOLO PRESIÓN ALTA
+                <h2 class="section-title" style="text-align: left; margin-bottom: 1.5rem;">LA HTA ES MAS QUE SOLO
+                    PRESIÓN ALTA
                 </h2>
-                <p><STRong>El asesino silencioso:</STRong> la HTA es un problema global que no presenta síntoma hasta que el daño es grave </p>
-                <p><strong>la raiz:</strong>  La presión constante rigidiza las arterias, dañando su capa interna: <strong> El Endotelio</strong></p>
-                <p><strong>El Riesgo Real: </strong>La arteria rigida aumenta dramáticamente la posibilidad de accidentes Cerebrovasculares (ACV)</p>
-           
+                <p><STRong>El asesino silencioso:</STRong> la HTA es un problema global que no presenta síntoma hasta
+                    que el daño es grave </p>
+                <p><strong>la raiz:</strong> La presión constante rigidiza las arterias, dañando su capa interna:
+                    <strong> El Endotelio</strong>
+                </p>
+                <p><strong>El Riesgo Real: </strong>La arteria rigida aumenta dramáticamente la posibilidad de
+                    accidentes Cerebrovasculares (ACV)</p>
+
             </div>
-            <div  style="border-radius: 100px; box-shadow: 0px 0px 20px rgba(255, 12, 12, 0.473);" class="info-image fade-in">
-                <img style=" border-radius: 100px; height: 100%;" src="assets/la tha.jpg"
-                    alt="Información Enfermedad">
+            <div style="border-radius: 100px; box-shadow: 0px 0px 20px rgba(255, 12, 12, 0.473);"
+                class="info-image fade-in">
+                <img style=" border-radius: 100px; height: 100%;" src="assets/la tha.jpg" alt="Información Enfermedad">
             </div>
-            
+
         </div>
-        
-        <center> <a style="background-color:#c7f9c6;margin-top: 5%; font-size: 2rem;" href="#catalogo" class="btn">Conoce la solución</a></center>
+
+        <center> <a style="background-color:#c7f9c6; margin-top: 9% !important; font-size: 2rem;" href="#catalogo"
+                class="btn">Conoce la solución</a></center>
     </section>
 
     <section id="catalogo" class="products section">
@@ -76,13 +82,15 @@
             <div class="product-grid">
                 <!-- Producto 1 -->
                 <article class="product-card fade-in" data-title="Producto Revitalizante"
-                    data-image="https://placehold.co/600x400/C7F9C6/?text=Producto+1">
-                    <div class="card-image" style="background-color: #982020;">
-                        <img src="https://placehold.co/600x400/C7F9C6/333333?text=Producto+1" alt="Producto 1">
+                    data-images='["assets/carru1.jpg", "assets/carru2.jpg"]'>
+                    <div class="card-image" style="background-color: #7e966c;">
+                        <center><img src="assets/IMG_4193.JPG" alt="Producto 1"></center>
                     </div>
                     <div class="card-content">
-                        <h3>Producto Revitalizante</h3>
-                        <p class="short-desc">Revitaliza tu piel con ingredientes naturales.</p>
+                        <h3>El mecanismo de VasoRagen</h3>
+                        <p class="short-desc"><strong>El Secreto del NO:</strong> Nuestro cuerpo usa el Óxido Nitrico (NO) para relajar y abrir los vasos.</p>
+                        <p class="short-desc"><strong>El Desafío:</strong> La HTA y el estrés oxidativo destruyen rápidamente el NO.</p>
+                        <p class="short-desc"><strong>Intervención Estratégica:</strong> VasoRegen™ está diseñado para proteger el Endotelio y maximizar la producción de NO, revirtiendo la rigidez arterial.</p>
                         <button class="btn-small open-modal">Ver más</button>
 
                         <!-- Hidden Details -->
@@ -146,8 +154,15 @@
         <div class="modal-content">
             <span class="close-modal">&times;</span>
             <div class="modal-body">
-                <div class="modal-image">
-                    <img src="" alt="Producto" id="modal-img">
+                <div class="modal-image-container">
+                    <div class="carousel-track" id="carousel-track">
+                        <!-- Images will be injected here -->
+                    </div>
+                    <button class="carousel-btn prev-btn" id="prev-btn">&lt;</button>
+                    <button class="carousel-btn next-btn" id="next-btn">&gt;</button>
+                    <div class="carousel-dots" id="carousel-dots">
+                        <!-- Dots will be injected here -->
+                    </div>
                 </div>
                 <div class="modal-info">
                     <h2 id="modal-title">Titulo del Producto</h2>
