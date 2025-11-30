@@ -407,7 +407,7 @@ body {
 
 .card-content h3 {
     text-align: center;
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 0.5rem;
     margin-left: 1rem;
     color: var(--accent-color);
@@ -741,5 +741,14 @@ body {
 
     .modal-info {
         padding: 1.5rem;
+    }
+
+    .card-content h3 {
+        font-size: 1.5rem;
+        
+    }
+    .card-content p{
+        margin-top: 1rem;
+        font-size: 0.6rem;
     }
 }
