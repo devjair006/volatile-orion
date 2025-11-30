@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos Naturales</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">VASORAGEN™: el futuro de la salud vascular</a>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#faq">Más información</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inicio" class="hero fade-in">
+        <div class="hero-shapes">
+            <div class="shape shape-1">🧅</div>
+            <div class="shape shape-2">🧄</div>
+            <div class="shape shape-3">🧅</div>
+            <div class="shape shape-4">🧄</div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-text">
+                <h1 style="font-size: 5rem; color: white;">El futuro de la salud vascular </h1>
+                <p style="font-size: 1.5rem; color: rgba(255, 255, 255, 0.548);">Descubre nuestra selección de productos
+                    orgánicos diseñados para tu salud y equilibrio.</p>
+                <a style="font-size: 2rem;" href="#catalogo" class="btn">Ver Productos</a>
+            </div>
+            <div class="hero-image">
+                <img style="width: 140%; margin-left: auto;" src="assets/PHOTO-2025-11-21-15-45-17.png"
+                    alt="Salud Vascular">
+            </div>
+        </div>
+    </header>
+
+    <section id="catalogo" class="products section">
+        <div class="container">
+            <h2 class="section-title fade-in">Nuestros Productos</h2>
+            <div class="product-grid">
+                <!-- Producto 1 -->
+                <article class="product-card fade-in" data-title="Producto Revitalizante"
+                    data-image="https://placehold.co/600x400/C7F9C6/?text=Producto+1">
+                    <div class="card-image" style="background-color: #982020;">
+                        <img src="https://placehold.co/600x400/C7F9C6/333333?text=Producto+1" alt="Producto 1">
+                    </div>
+                    <div class="card-content">
+                        <h3>Producto Revitalizante</h3>
+                        <p class="short-desc">Revitaliza tu piel con ingredientes naturales.</p>
+                        <button class="btn-small open-modal">Ver más</button>
+
+                        <!-- Hidden Details -->
+                        <div class="product-details" style="display: none;">
+                            <div class="detail-section">
+                                <h4>Ingredientes</h4>
+                                <p>Aloe vera, extracto de té verde, vitamina E.</p>
+                            </div>
+                            <div class="detail-section">
+                                <h4>Cómo se implementa</h4>
+                                <p>Aplicar suavemente sobre la piel limpia dos veces al día.</p>
+                            </div>
+                            <div class="detail-section">
+                                <h4>Beneficios</h4>
+                                <p>Hidratación profunda y regeneración celular.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq section">
+        <div class="container">
+            <h2 class="section-title fade-in">Preguntas Frecuentes</h2>
+            <div class="faq-list">
+                <div class="faq-item fade-in">
+                    <button class="faq-question">¿Son productos 100% naturales? <span class="icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Sí, todos nuestros productos están elaborados con ingredientes orgánicos certificados.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">¿Hacen envíos internacionales? <span class="icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Actualmente realizamos envíos a todo el país y algunas regiones seleccionadas.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">¿Tienen política de devolución? <span class="icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Sí, aceptamos devoluciones dentro de los 30 días posteriores a la compra si el producto está
+                            sellado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Natura. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="" alt="Producto" id="modal-img">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-title">Titulo del Producto</h2>
+                    <div id="modal-details">
+                        <!-- Details will be injected here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
