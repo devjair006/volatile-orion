@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Más Información - Preguntas Frecuentes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .info-hero {
+            min-height: 40vh;
+            background: linear-gradient(135deg, #7e966c 0%, #a8cf9c 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .info-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .info-bg-shape {
+            position: absolute;
+            font-size: 8rem;
+            opacity: 0.15;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .q1 {
+            top: 15%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .q2 {
+            bottom: 15%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .q3 {
+            top: 30%;
+            right: 30%;
+            font-size: 4rem;
+            animation-delay: 1s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">VASOREGEN™</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Origen.html" class="active" style="color: var(--accent-color);">Origen</a></li>
+                <li><a href="catalog.html">Producto</a></li>
+                <li><a href="info.html">Más información</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inicio" class="hero fade-in">
+        <div class="hero-shapes">
+            <div class="shape shape-1">🫜</div>
+            <div class="shape shape-2">🧄</div>
+            <div class="shape shape-3">🫜</div>
+            <div class="shape shape-4">🧄</div>
+        </div>
+        <div class="container hero-container1">
+            
+            <div class="hero-image1">
+                <img style="width: 140%; margin-left: auto;" src="assets/PHOTO-2025-11-21-15-45-17.png"
+                alt="Salud Vascular">
+                
+            </div>
+            <div class="hero-text1">
+                <p style="color: white;">En el mundo de la medicina, a menudo nos perdemos en las cifras; tratamos la hipertensión como un simple número que debemos reducir en un tensiómetro. Pero nosotros, en Team VasoRegen™, elegimos mirar más allá. Entendemos que detrás de cada diagnóstico de presión alta, existe una historia de desgaste silencioso y una preocupación que no siempre se nombra.</p>
+            <p style="color: white;">VasoRegen™ nació de una observación que nos conmovió: el verdadero problema no es solo que la presión suba, sino cómo esta "hiere" y marchita la capa más íntima y delicada de nuestras arterias, el endotelio. Esta capa es el guardián de nuestra vitalidad, y verla dañada es ver cómo se pierde la armonía de la vida en nuestro sistema circulatorio.                                                                                                                                  Nuestra verdadera inspiración nació al caminar por nuestras comunidades y conversar con pacientes de la tercera edad. Al encuestar a personas de hasta 80 años, pudimos ver en sus rostros no solo la carga de una enfermedad crónica, sino el deseo profundo de mantener su autonomía y seguir compartiendo momentos con sus seres queridos.</p>
+            </div>
+        </div>
+    </header>
+
+    
+
+    <!-- Additional Info Block -->
+    <section class="section" style="background-color: var(--secondary-color);">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title fade-in">Mas informacion de nuestra historia</h2>
+            <p class="fade-in" style="margin-bottom: 2rem; color: var(--text-light);">
+               Escuchamos sus historias sobre el miedo al olvido o a la inmovilidad que provoca un Accidente Cerebrovascular (ACV). Entendimos que para ellos, la salud no es solo la ausencia de enfermedad, sino la libertad de vivir con dignidad. VasoRegen™️ es nuestro homenaje a su sabiduría; una herramienta diseñada para que sus arterias recuperen la flexibilidad y la fuerza que el tiempo y la hipertensión han intentado arrebatarles.No podíamos quedarnos de brazos cruzados ante esa herencia de riesgo. Por eso, decidimos crear algo diferente, algo con alma: VasoRegen™️. Porque nuestra misión no es solo controlar una enfermedad; nuestra misión es regenerar la esperanza, restaurar la integridad de cada arteria y devolverle al cuerpo su capacidad natural de sanar.
+            </p>
+
+        <p style="margin-bottom: 2rem; color: var(--text-light);">VasoRegen™ también  fue soñado para quienes saben que su herencia genética es un desafío, pero no quieren que sea su final. Fue diseñado para el padre que quiere ver crecer a sus hijos y para el adulto que desea proteger su mente  de las sombras de un accidente cerebrovascular.</p>
+           
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 VASORAGEN. Todos los derechos reservados.</p>
+            <img style="margin-top: 3%;" width="10%" src="assets/uni.png" alt="">
+            <p>www.vasorgen.com</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

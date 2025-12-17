@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Productos Naturales</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Catalog specific styles could go here or in styles.css, 
+           putting them here for now to ensure they are applied without modifying styles.css too heavily yet */
+        .catalog-hero {
+            min-height: 50vh;
+            background: linear-gradient(135deg, rgb(60, 100, 70) 0%, #7eb375 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .catalog-hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: #E1FAF5;
+        }
+
+        .catalog-hero p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .catalog-bg-shape {
+            position: absolute;
+            opacity: 0.1;
+            font-size: 10rem;
+            animation: float 10s ease-in-out infinite;
+        }
+
+        .s1 {
+            top: 10%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .s2 {
+            bottom: 10%;
+            right: 5%;
+            animation-delay: 2s;
+        }
+
+        .s3 {
+            top: 20%;
+            right: 20%;
+            font-size: 5rem;
+            animation-delay: 4s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">VASOREGEN™</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Origen.html">Origen</a></li>
+                <li><a href="catalog.html" class="active" style="color: var(--accent-color);">Producto</a></li>
+                <li><a href="info.html">Más información</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="catalog-hero fade-in">
+        <div class="catalog-bg-shape s1">🌿</div>
+        <div class="catalog-bg-shape s2">💊</div>
+        <div class="catalog-bg-shape s3">💧</div>
+        <div class="container">
+            <h1>Nuestro Producto</h1>
+            <p>Soluciones naturales diseñadas científicamente para recuperar tu salud vascular.</p>
+        </div>
+    </header>
+
+    <section id="catalogo" class="products section">
+        <div class="hero-shapes">
+            <div class="shape shape-1">🔬</div>
+            <div class="shape shape-2">💊</div>
+            <div class="shape shape-3">🌡️</div>
+            <div class="shape shape-4">🔬</div>
+        </div>
+        <div class="container">
+            <!-- Reuse existing product grid structure -->
+            <div class="product-grid">
+                <!-- Producto 1 -->
+                <article class="product-card fade-in" data-title="Producto Revitalizante"
+                    data-images='["assets/carru1.jpg", "assets/carru2.jpg"]'>
+                    <div class="card-image" style="background-color: #7e966c;">
+                        <center><img src="assets/IMG_4193.JPG" alt="Producto 1"></center>
+                    </div>
+                    <div class="card-content">
+                        <h3>El mecanismo de VasoRegen</h3>
+                        <p style="font-size: 1.2rem;" class="short-desc"><strong>El Secreto del NO:</strong> Nuestro
+                            cuerpo usa el Óxido Nitrico
+                            (NO) para relajar y abrir los vasos.</p>
+                        <p style="font-size: 1.2rem;" class="short-desc"><strong>El Desafío:</strong> La HTA y el estrés
+                            oxidativo destruyen
+                            rápidamente el NO.</p>
+                        <p style="font-size: 1.2rem;" class="short-desc"><strong>Intervención Estratégica:</strong>
+                            VasoRegen™ está diseñado para
+                            proteger el Endotelio y maximizar la producción de NO, revirtiendo la rigidez arterial.</p>
+                        <button style="font-size: 1.2rem;" class="btn open-modal">Ver más</button>
+
+                        <!-- Hidden Details -->
+                        <div class="product-details" style="display: none;">
+                            <div class="detail-section">
+                                <h4>Ingredientes</h4>
+                                <p>L-ARGININA: Materia prima esencial para la producción de
+                                    Óxido Nitrico.</p>
+                                <br>
+                                <p>RESVERATROL: Potente antioxidante que protege al NO de la destrucción celular.</p>
+                                <br>
+                                <p>COENZIMA Q10: Estabilizador celular que optimiza la función del Endotelio.</p>
+                            </div>
+                            <div class="detail-section">
+                                <h4>innovacion</h4>
+                                <p>Cápsulas para una absorción óptima</p>
+                            </div>
+                            <div class="detail-section">
+                                <h4>detalles</h4>
+                                <p>El formato de la cápsula permite una liberación controlada y eficiente de los
+                                    componentes para que lleguen al sistema vascular.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Modal (Needed for catalog) -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <div class="carousel-track" id="carousel-track">
+                        <!-- Images will be injected here -->
+                    </div>
+                    <button class="carousel-btn prev-btn" id="prev-btn">&lt;</button>
+                    <button class="carousel-btn next-btn" id="next-btn">&gt;</button>
+                    <div class="carousel-dots" id="carousel-dots">
+                        <!-- Dots will be injected here -->
+                    </div>
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-title">Titulo del Producto</h2>
+                    <div id="modal-details">
+                        <!-- Details will be injected here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 VASORAGEN. Todos los derechos reservados.</p>
+            <img style="margin-top: 3%;" width="10%" src="assets/uni.png" alt="">
+            <p>www.vasorgen.com</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

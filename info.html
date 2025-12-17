@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Más Información - Preguntas Frecuentes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .info-hero {
+            min-height: 40vh;
+            background: linear-gradient(135deg, #7e966c 0%, #a8cf9c 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .info-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .info-bg-shape {
+            position: absolute;
+            font-size: 8rem;
+            opacity: 0.15;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .q1 {
+            top: 15%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .q2 {
+            bottom: 15%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .q3 {
+            top: 30%;
+            right: 30%;
+            font-size: 4rem;
+            animation-delay: 1s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">VASOREGEN™</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Origen.html">Origen</a></li>
+                <li><a href="catalog.html">Producto</a></li>
+                <li><a href="info.html" class="active" style="color: var(--accent-color);">Más información</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="info-hero fade-in">
+        <div class="info-bg-shape q1">?</div>
+        <div class="info-bg-shape q2">💡</div>
+        <div class="info-bg-shape q3">✨</div>
+        <div class="container">
+            <h1>Centro de Información</h1>
+            <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto; opacity: 0.9;">
+                Respuestas a tus dudas sobre nuestros productos y tu salud vascular.
+            </p>
+        </div>
+    </header>
+
+    <section id="faq" class="faq section" style="background-color: #fff;">
+        <div class="container">
+            <h2 class="section-title fade-in">Preguntas Frecuentes</h2>
+            <div class="faq-list">
+                <div class="faq-item fade-in">
+                    <button class="faq-question">¿Son productos 100% naturales? <span class="icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Sí, todos nuestros productos están elaborados con ingredientes orgánicos certificados.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">¿Hacen envíos internacionales? <span class="icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Actualmente realizamos envíos a todo el país y algunas regiones seleccionadas.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">¿Tienen política de devolución? <span class="icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Sí, aceptamos devoluciones dentro de los 30 días posteriores a la compra si el producto está
+                            sellado.</p>
+                    </div>
+                </div>
+                <!-- Added more content to flesh out the page -->
+                <div class="faq-item fade-in">
+                    <button class="faq-question">¿Cuánto tiempo tarda en hacer efecto? <span
+                            class="icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Los resultados pueden variar, pero generalmente se observan mejoras en la vitalidad dentro de
+                            las primeras 4 semanas de uso continuo.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">¿Tiene contraindicaciones? <span class="icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>VasoRegen es seguro para la mayoría de las personas. Sin embargo, recomendamos consultar con
+                            su médico si está embarazada, lactando o tomando medicamentos recetados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Info Block -->
+    <section class="section" style="background-color: var(--secondary-color);">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title fade-in">¿Necesitas más ayuda?</h2>
+            <p class="fade-in" style="margin-bottom: 2rem; color: var(--text-light);">
+                Nuestro equipo de especialistas está listo para resolver tus dudas específicas.
+            </p>
+            <a href="mailto:info@vasoregen.com" class="btn fade-in">Contáctanos</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 VASORAGEN. Todos los derechos reservados.</p>
+            <img style="margin-top: 3%;" width="10%" src="assets/uni.png" alt="">
+            <p>www.vasorgen.com</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
