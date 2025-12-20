@@ -55,6 +55,18 @@
             font-size: 4rem;
             animation-delay: 1s;
         }
+
+        .responsive-video {
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .responsive-video {
+                width: 90%;
+            }
+        }
     </style>
 </head>
 
@@ -84,49 +96,22 @@
         <div class="container">
             <h1>Centro de Información</h1>
             <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto; opacity: 0.9;">
-                Respuestas a tus dudas sobre nuestros productos y tu salud vascular.
+                Video informativo sobre vasoregen™
                 <br><br>
             </p>
         </div>
     </header>
 
     <div style="margin-top: 5%;">
-        
-        <center><p style="font-size: 2rem; max-width: 600px; margin: 0 auto; opacity: 0.9;color: #7e966c;">Advertencias y aclaraciones</p></center>
-        <center><p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto; opacity: 0.9;color: #7e966c;margin-top: 2rem;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga dolorem, eaque animi perferendis minus earum. Labore soluta esse assumenda praesentium!</p></center>
+        <center>
+            <h2 style="margin-bottom: 2%; font-size: 3rem; color: #7e966c;">Un poco de nosotros</h2>
+        </center>
+        <center><video src="assets/VIDEO-2025-12-19-22-47-56.mp4" class="responsive-video" controls></video></center>
     </div>
 
     <hr style="margin-top: 5%; opacity: 0.2;">
 
-    <section id="faq" class="faq section" style="background-color: #fff;">
-        <div class="container">
-            <h2 class="section-title fade-in">Preguntas Frecuentes</h2>
-            <div class="faq-list">
-                <div class="faq-item fade-in">
-                    <button class="faq-question">¿Para quiénes está diseñado VasoRegen™? <span class="icon">+</span></button>
-                    <div class="faq-answer">
-                        <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec metus vel ante finibus
-                            hendrerit. Nullam nec metus vel ante finibus hendrerit.</p>
-                    </div>
-                </div>
-                <div class="faq-item fade-in">
-                    <button class="faq-question">¿Que problema real soluciona VasoRegen™? <span class="icon">+</span></button>
-                    <div class="faq-answer">
-                        <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec metus vel ante finibus
-                            hendrerit. Nullam nec metus vel ante finibus hendrerit.</p>
-                    </div>
-                </div>
-                <div class="faq-item fade-in">
-                    <button class="faq-question">¿Qué ingredientes contiene VasoRegen™? ¿Para qué sirven cada uno? <span class="icon">+</span></button>
-                    <div class="faq-answer">
-                        <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec metus vel ante finibus
-                            hendrerit. Nullam nec metus vel ante finibus hendrerit.</p>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
+
 
     <!-- Additional Info Block -->
     <section class="section" style="background-color: var(--secondary-color);">
