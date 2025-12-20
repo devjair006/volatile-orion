@@ -95,86 +95,567 @@
         </div>
     </header>
 
-    <section id="catalogo" class="products section">
-        <div class="hero-shapes">
-            <div class="shape shape-1">🔬</div>
-            <div class="shape shape-2">💊</div>
-            <div class="shape shape-3">🌡️</div>
-            <div class="shape shape-4">🔬</div>
-        </div>
-        <div class="container">
-            <!-- Reuse existing product grid structure -->
-            <div class="product-grid">
-                <!-- Producto 1 -->
-                <article class="product-card fade-in" data-title="Producto Revitalizante"
-                    data-images='["assets/carru1.jpg", "assets/carru2.jpg"]'>
-                    <div class="card-image" style="background-color: #7e966c;">
-                        <center><img src="assets/IMG_4193.JPG" alt="Producto 1"></center>
-                    </div>
-                    <div class="card-content">
-                        <h3>El mecanismo de VasoRegen</h3>
-                        <p style="font-size: 1.2rem;" class="short-desc"><strong>El Secreto del NO:</strong> Nuestro
-                            cuerpo usa el Óxido Nitrico
-                            (NO) para relajar y abrir los vasos.</p>
-                        <p style="font-size: 1.2rem;" class="short-desc"><strong>El Desafío:</strong> La HTA y el estrés
-                            oxidativo destruyen
-                            rápidamente el NO.</p>
-                        <p style="font-size: 1.2rem;" class="short-desc"><strong>Intervención Estratégica:</strong>
-                            VasoRegen™ está diseñado para
-                            proteger el Endotelio y maximizar la producción de NO, revirtiendo la rigidez arterial.</p>
-                        <button style="font-size: 1.2rem;" class="btn open-modal">Ver más</button>
+    <style>
+        /* New Product Showcase Styles */
+        .product-showcase-section {
+            padding: 4rem 2rem;
+            background-color: #f9fdfa;
+        }
 
-                        <!-- Hidden Details -->
-                        <div class="product-details" style="display: none;">
-                            <div class="detail-section">
-                                <h4>Ingredientes</h4>
-                                <p>L-ARGININA: Materia prima esencial para la producción de
-                                    Óxido Nitrico.</p>
-                                <br>
-                                <p>RESVERATROL: Potente antioxidante que protege al NO de la destrucción celular.</p>
-                                <br>
-                                <p>COENZIMA Q10: Estabilizador celular que optimiza la función del Endotelio.</p>
+        .product-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .showcase-layout {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            margin-bottom: 6rem;
+        }
+
+        .showcase-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .showcase-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            transition: transform 0.5s ease;
+        }
+
+        .showcase-image:hover img {
+            transform: scale(1.02);
+        }
+
+        .showcase-info {
+            flex: 1;
+            padding: 2rem;
+        }
+
+        .showcase-title {
+            font-size: 3rem;
+            color: #2c5e38;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .showcase-desc {
+            font-size: 1.25rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .ingredients-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid #7eb375;
+        }
+
+        .ingredients-title {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ingredient-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        .ingredient-icon {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: #7eb375;
+            background: #eef7eb;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .ingredient-text h4 {
+            margin: 0 0 5px 0;
+            color: #2c5e38;
+        }
+
+        .ingredient-text p {
+            margin: 0;
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Detail Sections */
+        .info-block {
+            padding: 4rem 2rem;
+            text-align: left;
+        }
+
+        .info-block.alt-bg {
+            background-color: #fff;
+        }
+
+        .info-block-content {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .info-title {
+            font-size: 2.5rem;
+            color: #2c5e38;
+            margin-bottom: 2rem;
+        }
+
+        .info-text {
+            font-size: 1.2rem;
+            line-height: 1.2;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 900px) {
+            .showcase-layout {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .showcase-info {
+                padding: 0;
+            }
+        }
+    </style>
+    <section id="catalogo" class="product-showcase-section fade-in">
+        <div class="product-container">
+            <!-- Product Showcase -->
+            <div class="showcase-layout">
+                <div class="showcase-image">
+                    <img src="assets/IMG_4193.JPG" alt="VasoRegen Producto">
+                </div>
+                <div class="showcase-info">
+                    <h2 class="showcase-title">VasoRegen™</h2>
+                    <div class="showcase-desc">
+                        <p><strong>El mecanismo de intervención:</strong> Nuestro cuerpo utiliza el Óxido Nítrico (NO)
+                            para relajar y abrir los vasos, pero la hipertensión y el estrés oxidativo lo destruyen
+                            rápidamente.</p>
+                        <br>
+                        <p>VasoRegen™ está diseñado para proteger el Endotelio y maximizar la producción de NO,
+                            revirtiendo la rigidez arterial y recuperando tu salud vascular de manera natural.</p>
+                    </div>
+
+                    <div class="ingredients-box">
+                        <h3 class="ingredients-title">🧬 Ingredientes Activos</h3>
+                        <div class="ingredient-item">
+                            <div class="ingredient-icon">⚡</div>
+                            <div class="ingredient-text">
+                                <h4>L-ARGININA</h4>
+                                <p>Materia prima esencial para la producción de Óxido Nítrico.</p>
                             </div>
-                            <div class="detail-section">
-                                <h4>innovacion</h4>
-                                <p>Cápsulas para una absorción óptima</p>
+                        </div>
+                        <div class="ingredient-item">
+                            <div class="ingredient-icon">🛡️</div>
+                            <div class="ingredient-text">
+                                <h4>RESVERATROL</h4>
+                                <p>Potente antioxidante que protege al NO de la destrucción celular.</p>
                             </div>
-                            <div class="detail-section">
-                                <h4>detalles</h4>
-                                <p>El formato de la cápsula permite una liberación controlada y eficiente de los
-                                    componentes para que lleguen al sistema vascular.</p>
+                        </div>
+                        <div class="ingredient-item">
+                            <div class="ingredient-icon">🔋</div>
+                            <div class="ingredient-text">
+                                <h4>COENZIMA Q10</h4>
+                                <p>Estabilizador celular que optimiza la función del Endotelio.</p>
                             </div>
                         </div>
                     </div>
-                </article>
+                </div>
             </div>
+
+            <!-- What is it Section -->
+            <div class="info-block alt-bg">
+                <div class="info-block-content">
+                    <h2 class="info-title">¿Qué es VasoRegen?</h2>
+                    <p class="info-text">
+                        VasoRegen™ se define como una propuesta de medicina regenerativa no invasiva presentada en
+                        un formato de suplemento oral mediante nanocápsulas. A diferencia de los enfoques
+                        convencionales, su diseño biotecnológico no se limita a la regulación de cifras tensionales,
+                        sino
+                        que busca restaurar de manera integral la integridad del endotelio vascular y optimizar la
+                        función arterial. Este suplemento utiliza el concepto de nanomedicina para facilitar la entrega
+                        eficiente de moléculas bioactivas a través de vesículas que protegen y transportan los
+                        principios
+                        activos directamente al sistema circulatorio.
+
+                    </p>
+                    <p class="info-text">
+                        La Raíz del Problema: El desarrollo de VasoRegen™ se fundamenta en la identificación de una
+                        falla crítica en la fisiología cardiovascular: la disfunción endotelial. El endotelio es el
+                        regulador
+                        clave de la salud vascular, encargado de producir óxido nítrico (NO), una molécula esencial para
+                        la vasodilatación y la prevención de coágulos.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Scientific Formulation (New Section) -->
+            <style>
+                .scientific-formulation {
+                    padding: 0 0 4rem 0;
+                }
+
+                .scientific-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                    gap: 2rem;
+                    margin-top: 3rem;
+                }
+
+                .science-card {
+                    background: white;
+                    border-radius: 15px;
+                    padding: 2rem;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+                    border-top: 5px solid #7eb375;
+                    transition: transform 0.3s ease;
+                }
+
+                .science-card:hover {
+                    transform: translateY(-5px);
+                }
+
+                .sc-header {
+                    margin-bottom: 1.5rem;
+                    border-bottom: 1px solid #eee;
+                    padding-bottom: 1rem;
+                }
+
+                .sc-title {
+                    font-size: 1.4rem;
+                    color: #2c5e38;
+                    margin: 0;
+                    font-weight: 700;
+                }
+
+                .sc-scientific-name {
+                    font-style: italic;
+                    color: #888;
+                    font-size: 0.9rem;
+                    margin-top: 5px;
+                    display: block;
+                }
+
+                .sc-active-tag {
+                    display: inline-block;
+                    background-color: #eef7eb;
+                    color: #555;
+                    padding: 5px 10px;
+                    border-radius: 20px;
+                    font-size: 0.85rem;
+                    margin-top: 10px;
+                    font-weight: 600;
+                }
+
+                .sc-body {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.2rem;
+                }
+
+                .sc-row {
+                    display: flex;
+                    gap: 12px;
+                }
+
+                .sc-icon {
+                    font-size: 1.2rem;
+                    color: #7eb375;
+                    padding-top: 2px;
+                }
+
+                .sc-label {
+                    font-weight: 700;
+                    font-size: 0.9rem;
+                    color: #444;
+                    display: block;
+                    margin-bottom: 3px;
+                }
+
+                .sc-text {
+                    font-size: 0.95rem;
+                    color: #666;
+                    line-height: 1.5;
+                    margin: 0;
+                }
+            </style>
+
+            <div class="info-block scientific-formulation">
+                <div class="product-container">
+                    <h2 class="info-title">Formulación Científica</h2>
+                    <div class="scientific-grid">
+
+                        <!-- Ajo -->
+                        <div class="science-card">
+                            <div class="sc-header">
+                                <h3 class="sc-title">Ajo</h3>
+                                <span class="sc-scientific-name">Allium sativum</span>
+                                <span class="sc-active-tag">Alicina y compuestos organosulfurados</span>
+                            </div>
+                            <div class="sc-body">
+                                <div class="sc-row">
+                                    <div class="sc-icon">⚙️</div>
+                                    <div>
+                                        <span class="sc-label">Acción Bioquímica</span>
+                                        <p class="sc-text">Estimula la actividad de la enzima óxido nítrico sintasa
+                                            (eNOS).</p>
+                                    </div>
+                                </div>
+                                <div class="sc-row">
+                                    <div class="sc-icon">❤️</div>
+                                    <div>
+                                        <span class="sc-label">Función Endotelial</span>
+                                        <p class="sc-text">Promueve la vasodilatación y reduce la rigidez de las paredes
+                                            arteriales.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hibiscus -->
+                        <div class="science-card">
+                            <div class="sc-header">
+                                <h3 class="sc-title">Hibiscus</h3>
+                                <span class="sc-scientific-name">Hibiscus sabdariffa</span>
+                                <span class="sc-active-tag">Antocianinas y Quercetina</span>
+                            </div>
+                            <div class="sc-body">
+                                <div class="sc-row">
+                                    <div class="sc-icon">🛑</div>
+                                    <div>
+                                        <span class="sc-label">Acción Bioquímica</span>
+                                        <p class="sc-text">Actúa como un inhibidor natural de la enzima convertidora de
+                                            angiotensina (ECA).</p>
+                                    </div>
+                                </div>
+                                <div class="sc-row">
+                                    <div class="sc-icon">🧬</div>
+                                    <div>
+                                        <span class="sc-label">Función Endotelial</span>
+                                        <p class="sc-text">Disminuye la presión hidrostática sobre el endotelio,
+                                            permitiendo su recuperación estructural.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Terminalia catappa -->
+                        <div class="science-card">
+                            <div class="sc-header">
+                                <h3 class="sc-title">Terminalia</h3>
+                                <span class="sc-scientific-name">Terminalia catappa</span>
+                                <span class="sc-active-tag">Punicalina y Terflavina A</span>
+                            </div>
+                            <div class="sc-body">
+                                <div class="sc-row">
+                                    <div class="sc-icon">🛡️</div>
+                                    <div>
+                                        <span class="sc-label">Acción Bioquímica</span>
+                                        <p class="sc-text">Posee potentes propiedades quimiopreventivas y antioxidantes
+                                            que protegen la membrana celular.</p>
+                                    </div>
+                                </div>
+                                <div class="sc-row">
+                                    <div class="sc-icon">🩹</div>
+                                    <div>
+                                        <span class="sc-label">Función Endotelial</span>
+                                        <p class="sc-text">Evita la apoptosis (muerte celular) del endotelio,
+                                            facilitando la reparación de lesiones vasculares.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Crataegus -->
+                        <div class="science-card">
+                            <div class="sc-header">
+                                <h3 class="sc-title">Crataegus</h3>
+                                <span class="sc-scientific-name">Crataegus monogyna</span>
+                                <span class="sc-active-tag">Proantocianidinas oligoméricas</span>
+                            </div>
+                            <div class="sc-body">
+                                <div class="sc-row">
+                                    <div class="sc-icon">🔗</div>
+                                    <div>
+                                        <span class="sc-label">Acción Bioquímica</span>
+                                        <p class="sc-text">Refuerza la red de colágeno y elastina en los vasos
+                                            sanguíneos.</p>
+                                    </div>
+                                </div>
+                                <div class="sc-row">
+                                    <div class="sc-icon">💪</div>
+                                    <div>
+                                        <span class="sc-label">Función Endotelial</span>
+                                        <p class="sc-text">Aumenta directamente la elasticidad arterial y mejora la
+                                            contractilidad del sistema circulatorio.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ginkgo Biloba -->
+                        <div class="science-card">
+                            <div class="sc-header">
+                                <h3 class="sc-title">Ginkgo Biloba</h3>
+                                <span class="sc-scientific-name">Ginkgo biloba</span>
+                                <span class="sc-active-tag">Flavonoides y Terpenoides</span>
+                            </div>
+                            <div class="sc-body">
+                                <div class="sc-row">
+                                    <div class="sc-icon">🌊</div>
+                                    <div>
+                                        <span class="sc-label">Acción Bioquímica</span>
+                                        <p class="sc-text">Reduce la viscosidad sanguínea y combate los radicales libres
+                                            de oxígeno.</p>
+                                    </div>
+                                </div>
+                                <div class="sc-row">
+                                    <div class="sc-icon">🧠</div>
+                                    <div>
+                                        <span class="sc-label">Función Endotelial</span>
+                                        <p class="sc-text">Protege la microcirculación (especialmente cerebral) y
+                                            previene la inflamación endotelial.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Té Verde -->
+                        <div class="science-card">
+                            <div class="sc-header">
+                                <h3 class="sc-title">Té Verde</h3>
+                                <span class="sc-scientific-name">Camellia sinensis</span>
+                                <span class="sc-active-tag">Galato de epigalocatequina (EGCG)</span>
+                            </div>
+                            <div class="sc-body">
+                                <div class="sc-row">
+                                    <div class="sc-icon">🛡️</div>
+                                    <div>
+                                        <span class="sc-label">Acción Bioquímica</span>
+                                        <p class="sc-text">Inhibe la oxidación de las lipoproteínas de baja densidad
+                                            (LDL).</p>
+                                    </div>
+                                </div>
+                                <div class="sc-row">
+                                    <div class="sc-icon">🧹</div>
+                                    <div>
+                                        <span class="sc-label">Función Endotelial</span>
+                                        <p class="sc-text">Actúa como un escudo antioxidante que previene la formación
+                                            de placas y mantiene el endotelio limpio.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cucúrbita -->
+                        <div class="science-card">
+                            <div class="sc-header">
+                                <h3 class="sc-title">Cucúrbita</h3>
+                                <span class="sc-scientific-name">Cucúrbita pepo</span>
+                                <span class="sc-active-tag">Fitosteroles y L-arginina orgánica</span>
+                            </div>
+                            <div class="sc-body">
+                                <div class="sc-row">
+                                    <div class="sc-icon">⛽</div>
+                                    <div>
+                                        <span class="sc-label">Acción Bioquímica</span>
+                                        <p class="sc-text">Proporciona sustratos naturales para la producción sostenida
+                                            de óxido nítrico (NO).</p>
+                                    </div>
+                                </div>
+                                <div class="sc-row">
+                                    <div class="sc-icon">🧘</div>
+                                    <div>
+                                        <span class="sc-label">Función Endotelial</span>
+                                        <p class="sc-text">Favorece la relajación del músculo liso vascular sin causar
+                                            una regulación negativa de la enzima NOS.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Granada -->
+                        <div class="science-card">
+                            <div class="sc-header">
+                                <h3 class="sc-title">Granada</h3>
+                                <span class="sc-scientific-name">Punica granatum</span>
+                                <span class="sc-active-tag">Punicalaginas y Ácido elágico</span>
+                            </div>
+                            <div class="sc-body">
+                                <div class="sc-row">
+                                    <div class="sc-icon">📈</div>
+                                    <div>
+                                        <span class="sc-label">Acción Bioquímica</span>
+                                        <p class="sc-text">Incrementa la expresión de los genes que sintetizan el óxido
+                                            nítrico en las células endoteliales.</p>
+                                    </div>
+                                </div>
+                                <div class="sc-row">
+                                    <div class="sc-icon">🔄</div>
+                                    <div>
+                                        <span class="sc-label">Función Endotelial</span>
+                                        <p class="sc-text">Reduce el grosor íntima-media de las arterias, restaurando la
+                                            flexibilidad y previniendo el daño por HTA.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hypertension Section -->
+            <div class="info-block">
+                <div class="info-block-content">
+                    <h2 class="info-title">Sobre la Hipertensión Arterial</h2>
+                    <p class="info-text">
+                        La Hipertensión Arterial (HTA) lesiona este tejido de forma progresiva, provocando:
+                    <ul>
+                        <li class="info-text">Una disminución severa en la síntesis de óxido nítrico.</li>
+                        <li class="info-text">Un estado de vasoconstricción persistente e inflamación vascular.</li>
+                        <li class="info-text">Una aceleración de la aterosclerosis, lo que incrementa directamente el
+                            riesgo de
+                            Accidentes Cerebrovasculares (ACV)</li>
+                    </ul>
+                    </p>
+                    <p class="info-text">
+                        La Brecha Terapéutica y la Necesidad de Regeneración <br><br>
+                        Nuestra investigación identificó una "brecha terapéutica" en los tratamientos actuales para la
+                        HTA. Aunque los fármacos antihipertensivos son vitales para el control de la presión, estos no
+                        revierten el daño estructural ya causado en las paredes arteriales. VasoRegen™ surge para
+                        atacar la patofisiología subyacente, promoviendo la reparación celular y restaurando la
+                        capacidad elástica de las arterias, una necesidad crítica para pacientes cuya integridad
+                        vascular
+                        se ve comprometida por el estrés oxidativo.
+                    </p>
+                </div>
+            </div>
+
         </div>
     </section>
 
     <!-- Product Modal (Needed for catalog) -->
-    <div id="product-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="modal-body">
-                <div class="modal-image-container">
-                    <div class="carousel-track" id="carousel-track">
-                        <!-- Images will be injected here -->
-                    </div>
-                    <button class="carousel-btn prev-btn" id="prev-btn">&lt;</button>
-                    <button class="carousel-btn next-btn" id="next-btn">&gt;</button>
-                    <div class="carousel-dots" id="carousel-dots">
-                        <!-- Dots will be injected here -->
-                    </div>
-                </div>
-                <div class="modal-info">
-                    <h2 id="modal-title">Titulo del Producto</h2>
-                    <div id="modal-details">
-                        <!-- Details will be injected here -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- Modal removed as part of refactor -->
 
     <footer class="footer">
         <div class="container">
